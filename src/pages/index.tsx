@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       },
     }
   );
+  console.log(notes)
   return (
     <div className="2xl:max-w-[90rem] max-w-[68rem] mx-auto">
       <div className="m-8 grid grid-cols-[repeat(auto-fill,_320px)] gap-7">
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
         </div>
         {/* Note Items */}
 
-        {notes?.map((note) => (
+        {notes && notes?.map((note) => (
           <NoteItem key={note.id} note={note} />
         ))}
 
